@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "ban-trigger",
+  "version": "${version}",
+
+  "name": "Ban Trigger",
+  "description": "Logs block-break and container-open events into CSV files",
+  "authors": [
+    "falseresync"
+  ],
+  "contact": {
+    "homepage": "https://falseresync.ru/projects/ban-trigger",
+    "issues": "https://github.com/falseresync/ban-trigger"
+  },
+
+  "license": "MIT",
+
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "ru.falseresync.banTrigger.BanTrigger"
+    ]
+  },
+  "mixins": [
+    "ban-trigger.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric-api-base": "*",
+    "fabric-networking-v0": "*",
+    "fabric-lifecycle-events-v1": "*",
+    "fabric-containers-v0": "*",
+    "fabric-screen-handler-api-v1": "*"
+  }
+}
